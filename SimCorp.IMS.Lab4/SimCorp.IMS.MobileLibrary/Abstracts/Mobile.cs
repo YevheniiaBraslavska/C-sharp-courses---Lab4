@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
-namespace SimCorp.IMS.Lab3 {
+namespace SimCorp.IMS.MobileLibrary {
     public abstract class Mobile {
         public abstract ScreenAttribute Screen { get; }
         public abstract KeyboardAttribute Keyboard { get; }
@@ -9,7 +10,9 @@ namespace SimCorp.IMS.Lab3 {
         public abstract SlotAttribute Slot { get; }
         public IPlayback PlaybackComponent { get; set; }
         public ICharger ChargingComponent { get; set; }
-        public SMSProvider SmsProvider { get; set; }
+        internal SMSProvider SmsProvider { get; set; }
+        public static double Id { get; private set; }
+        public Storage Memory { get; set; }
 
         public void Play(object data) {
             PlaybackComponent.Play(data);
@@ -21,6 +24,10 @@ namespace SimCorp.IMS.Lab3 {
 
         private void Show(IScreenImage screenImage) {
             Screen.Show(screenImage);
+        }
+
+        public double GetNumber() {
+            return Id++;
         }
 
         public override string ToString() {

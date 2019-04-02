@@ -2,7 +2,7 @@
 using System.ComponentModel.Design;
 using SimCorp.IMS.MobileLibrary;
 
-namespace SimCorp.IMS.Lab3 {
+namespace SimCorp.IMS.MobileLibrary {
     class Program {
         static void Main(string[] args) {
             var mobile = new SimCorpMobile();

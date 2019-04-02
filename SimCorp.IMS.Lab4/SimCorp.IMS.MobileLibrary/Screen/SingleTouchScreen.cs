@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimCorp.IMS.Lab3 {
+namespace SimCorp.IMS.MobileLibrary {
     public class SingleTouchScreen : ScreenAttribute{
         public override int Height { get; set; }
         public override int Width { get; set; }

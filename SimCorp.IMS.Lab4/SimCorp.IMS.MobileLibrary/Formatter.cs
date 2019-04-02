@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SimCorp.IMS.MobileLibrary {
     public class MessageFormatter {
-        public delegate string FormatHandler(string text);
+        public delegate string FormatHandler(UserMessage text);
 
         public FormatHandler Formatter;
 
@@ -23,24 +23,24 @@ namespace SimCorp.IMS.MobileLibrary {
             Formatter = null;
         }
 
-        public static string StartWithTime(string message) {
-            return $"[{DateTime.Now}] {message}";
+        public static string StartWithTime(UserMessage message) {
+            return $"[{message.ReceivingTime}] {message.Text}";
         }
 
-        public static string EndWithTime(string message) {
-            return $"{message} [{DateTime.Now}]";
+        public static string EndWithTime(UserMessage message) {
+            return $"{message.Text} [{message.ReceivingTime}]";
         }
 
-        public static string LowerCase(string message) {
-            return message.ToLower();
+        public static string LowerCase(UserMessage message) {
+            return message.Text.ToLower();
         }
 
-        public static string UpperCase(string message) {
-            return message.ToUpper();
+        public static string UpperCase(UserMessage message) {
+            return message.Text.ToUpper();
         }
 
-        public static string Custom(string message) {
-            var charArray = message.ToCharArray();
+        public static string Custom(UserMessage message) {
+            var charArray = message.Text.ToCharArray();
             Array.Reverse(charArray);
             return new string(charArray);
         }

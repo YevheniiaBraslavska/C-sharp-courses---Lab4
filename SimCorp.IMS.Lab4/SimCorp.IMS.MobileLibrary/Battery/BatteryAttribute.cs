@@ -1,4 +1,4 @@
-﻿namespace SimCorp.IMS.Lab3 {
+﻿namespace SimCorp.IMS.MobileLibrary {
     public class BatteryAttribute {
         public enum Types {
             LitiumIon = 1,

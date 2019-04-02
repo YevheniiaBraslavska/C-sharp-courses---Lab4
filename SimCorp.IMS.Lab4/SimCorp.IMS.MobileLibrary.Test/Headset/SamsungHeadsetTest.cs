@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SimCorp.IMS.Lab3;
 using System;
 using System.Collections.Generic;
 using System.Linq;

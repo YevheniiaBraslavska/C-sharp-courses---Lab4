@@ -1,4 +1,4 @@
-﻿namespace SimCorp.IMS.Lab3 {
+﻿namespace SimCorp.IMS.MobileLibrary {
     public abstract class ScreenAttribute {
         public abstract int Height { get; set; }
         public abstract int Width { get; set; }

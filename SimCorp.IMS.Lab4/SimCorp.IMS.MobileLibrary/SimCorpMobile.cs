@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SimCorp.IMS.MobileLibrary;
 
-namespace SimCorp.IMS.Lab3 {
+namespace SimCorp.IMS.MobileLibrary {
     public class SimCorpMobile : Mobile {
         private readonly MultyTouchScreen vScreen;
         private readonly OnScreenKeyboard vKeyboard;
         private readonly BatteryAttribute vBattery;
         private readonly SimCardSlot vSlot;
+        public double Number { get; private set; }
 
         public override ScreenAttribute Screen
         {
@@ -46,14 +47,16 @@ namespace SimCorp.IMS.Lab3 {
         }
 
         public SimCorpMobile() {
+            Number = GetNumber();
+
             vScreen = new MultyTouchScreen(10);
 
-            List<Layout> layouts = new List<Layout>();
+            var layouts = new List<Layout>();
 
             //Layout of letters
-            List<char> set = new List<char>();
+            var set = new List<char>();
             set.AddRange(Enumerable.Range('A', 26).Select(x => (char)x));
-            Layout layout = new Layout(set);
+            var layout = new Layout(set);
             layouts.Add(layout);
 
             //Layout of numbers
@@ -67,6 +70,7 @@ namespace SimCorp.IMS.Lab3 {
             vSlot = new SimCardSlot(SimCardSlot.FormFactors.MicroSim, 100, 200);
 
             SmsProvider = new SMSProvider();
+            Memory = new Storage();
         }
 
         public void AddMessanger(EventHandler<SMSRecieverEventArgs> func) {

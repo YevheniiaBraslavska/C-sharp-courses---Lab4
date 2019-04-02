@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SimCorp.IMS.Lab3 {
+namespace SimCorp.IMS.MobileLibrary {
     public class Button {
         private List<char> vValues;
 

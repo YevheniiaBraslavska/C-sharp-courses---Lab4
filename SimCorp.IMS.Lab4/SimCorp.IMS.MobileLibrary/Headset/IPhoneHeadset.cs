@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimCorp.IMS.Lab3 {
+namespace SimCorp.IMS.MobileLibrary {
     public class IPhoneHeadset : IPlayback {
         private IOutput Output { get; }
         public string BluetoothConnection { get; private set; }

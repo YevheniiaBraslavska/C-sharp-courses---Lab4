@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SimCorp.IMS.Lab3;
+using SimCorp.IMS.MobileLibrary;
 using System.Windows.Forms;
 
-namespace SimCorp.IMS.Lab3 {
+namespace SimCorp.IMS.MobileLibrary {
     public class WinLogOutput : IOutput {
         private RichTextBox _vTextBox { get; }
 

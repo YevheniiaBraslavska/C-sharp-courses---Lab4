@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using SimCorp.IMS.Lab3;
 using SimCorp.IMS.MobileLibrary;
 
 namespace SimCorp.IMS.WinFormApp {

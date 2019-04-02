@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SimCorp.IMS.MobileLibrary;
 
-namespace SimCorp.IMS.Lab3 {
+namespace SimCorp.IMS.MobileLibrary {
     public class SamsungHeadset : IPlayback {
         private IOutput Output { get; }
         public AudioPlug Plug { get; private set; }

@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SimCorp.IMS.Lab3;
+using SimCorp.IMS.MobileLibrary;
 
 namespace MobileLibrary.Test {
     [TestClass]

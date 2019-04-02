@@ -1,11 +1,11 @@
-﻿using SimCorp.IMS.Lab3;
+﻿using SimCorp.IMS.MobileLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimCorp.IMS.Lab3 {
+namespace SimCorp.IMS.MobileLibrary {
     public class FakeOutput : IOutput {
         public string OutputResult { get; set; }
 

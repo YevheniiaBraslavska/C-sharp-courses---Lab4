@@ -7,27 +7,26 @@ namespace MobileLibrary.Test {
     [TestClass]
     public class MessageFormatterTest {
         [TestMethod]
-        public void StartWithTimeRightOutput()
-        {
-            const string message = "Message";
+        public void StartWithTimeRightOutput() {
+            var message = new UserMessage("user", "message");
 
             var act_message = MessageFormatter.StartWithTime(message);
 
-            Assert.AreEqual(act_message,$"[{DateTime.Now}] {message}");
+            Assert.AreEqual(act_message, $"[{message.ReceivingTime}] {message.Text}");
         }
 
         [TestMethod]
         public void EndWithTimeRightOutput() {
-            const string message = "Message";
+            var message = new UserMessage("user", "message");
 
             var act_message = MessageFormatter.EndWithTime(message);
 
-            Assert.AreEqual(act_message, $"{message} [{DateTime.Now}]");
+            Assert.AreEqual(act_message, $"{message.Text} [{message.ReceivingTime}]");
         }
 
         [TestMethod]
         public void LowerCaseRightOutput() {
-            const string message = "Message";
+            var message = new UserMessage("user", "message");
 
             var act_message = MessageFormatter.LowerCase(message);
 
@@ -36,7 +35,7 @@ namespace MobileLibrary.Test {
 
         [TestMethod]
         public void UpperCaseRightOutput() {
-            const string message = "Message";
+            var message = new UserMessage("user", "message");
 
             var act_message = MessageFormatter.UpperCase(message);
 
@@ -45,11 +44,11 @@ namespace MobileLibrary.Test {
 
         [TestMethod]
         public void CustomRightOutput() {
-            const string message = "Message";
+            var message = new UserMessage("user", "message");
 
             var act_message = MessageFormatter.Custom(message);
 
-            Assert.AreEqual(act_message, "egasseM");
+            Assert.AreEqual(act_message, "egassem");
         }
     }
 }

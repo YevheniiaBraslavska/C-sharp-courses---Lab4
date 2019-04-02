@@ -51,6 +51,7 @@
     <Compile Include="Headset\IPhoneHeadsetTest.cs" />
     <Compile Include="Headset\PhoneSpeakerTest.cs" />
     <Compile Include="MessageFormatterTest.cs" />
+    <Compile Include="MessagesFilterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Headset\SamsungHeadsetTest.cs" />
     <Compile Include="Charger\ExternalChargerTest.cs" />

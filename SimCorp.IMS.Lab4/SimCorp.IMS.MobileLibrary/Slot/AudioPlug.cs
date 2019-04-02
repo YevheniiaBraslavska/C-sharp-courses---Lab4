@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SimCorp.IMS.Lab3;
+using SimCorp.IMS.MobileLibrary;
 
 namespace SimCorp.IMS.MobileLibrary {
     public class AudioPlug : SlotAttribute {
